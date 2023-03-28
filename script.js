@@ -17,8 +17,9 @@ const btnHold = document.querySelector('.btn--hold');
 
 //Starting Conditions
 const playerNames = [prompt("Enter Player 1 Name"), prompt("Enter Player 2 Name")]
-player1Name.textContent = `${playerNames[0]}`;
-player2Name.textContent = `${playerNames[1]}`;
+console.log(playerNames[0], playerNames[1]);
+playerNames[0] == null ? player1Name.textContent = 'Player 1' : player1Name.textContent = `${playerNames[0]}`;
+playerNames[1] == null ? player2Name.textContent = 'Player 2' : player2Name.textContent = `${playerNames[1]}`;
 score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
