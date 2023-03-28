@@ -3,6 +3,8 @@
 // Selecting elements
 const player1El = document.querySelector('.player--1');
 const player0El = document.querySelector('.player--0');
+const player1Name = document.querySelector('#name--0');
+const player2Name = document.querySelector('#name--1');
 const score0El = document.getElementById('score--0');
 const score1El = document.getElementById('score--1');
 const currentScore0 = document.getElementById('current--0');
@@ -14,6 +16,9 @@ const btnHold = document.querySelector('.btn--hold');
 
 
 //Starting Conditions
+const playerNames = [prompt("Enter Player 1 Name"), prompt("Enter Player 2 Name")]
+player1Name.textContent = `${playerNames[0]}`;
+player2Name.textContent = `${playerNames[1]}`;
 score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
@@ -23,6 +28,7 @@ const scores = [0, 0]
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
+
 
 
 const switchPlayer = function(){
